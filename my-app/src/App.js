@@ -6,16 +6,21 @@ function formatName(user) {
     return user.firstName + ' ' + user.lastName;
 }
 
-const user = {
+function getGreeting(user) {
+    if (user) {
+        return <h1>Hello, {formatName(user)}!</h1>;
+    }
+    return <h1>Hello, Stranger.</h1>;
+}
+
+/*const user = {
     firstName: 'Vyacheslav',
     lastName: 'Mukhin'
-}
+}*/
 
 
 const element = (
-    <h1>
-        Hello, {formatName(user)}!
-    </h1>
+    getGreeting()
 );
 
 class App extends Component {
