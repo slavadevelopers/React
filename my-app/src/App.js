@@ -15,7 +15,8 @@ function getGreeting(user) {
 
 const user = {
     firstName: 'Vyacheslav',
-    lastName: 'Mukhin'
+    lastName: 'Mukhin',
+    avatarUrl: '/static/media/logo.5d5d9eef.svg'
 }
 
 
@@ -25,12 +26,14 @@ const element = (
 
 const element1 = <div tabIndex="0"></div>;
 
+const element2 = <img src={user.avatarUrl} className="App-logo" alt="logo" />
+
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          {element2}
           <h2>Welcome to React</h2>
         </div>
         <p className="App-intro">
