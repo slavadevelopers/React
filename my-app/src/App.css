@@ -22,3 +22,8 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+div[tabIndex="0"] {
+  background-color: crimson;
+  height: 1px;
+}

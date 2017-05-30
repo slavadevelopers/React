@@ -13,15 +13,17 @@ function getGreeting(user) {
     return <h1>Hello, Stranger.</h1>;
 }
 
-/*const user = {
+const user = {
     firstName: 'Vyacheslav',
     lastName: 'Mukhin'
-}*/
+}
 
 
 const element = (
-    getGreeting()
+    getGreeting(user)
 );
+
+const element1 = <div tabIndex="0"></div>;
 
 class App extends Component {
   render() {
@@ -35,6 +37,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         {element}
+        {element1}
       </div>
     );
   }
