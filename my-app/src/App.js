@@ -28,6 +28,13 @@ const element1 = <div tabIndex="0"></div>;
 
 const element2 = <img src={user.avatarUrl} className="App-logo" alt="logo" />
 
+const element3 = (
+    <div>
+        <h1>Hello!</h1>
+        <h2>Good to see you here.</h2>
+    </div>
+);
+
 class App extends Component {
   render() {
     return (
@@ -41,6 +48,7 @@ class App extends Component {
         </p>
         {element}
         {element1}
+        {element3}
       </div>
     );
   }
