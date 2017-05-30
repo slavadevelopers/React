@@ -35,6 +35,18 @@ const element3 = (
     </div>
 );
 
+const element4 = (
+    <h1 className="greeting">
+        Hello, world!
+    </h1>
+);
+
+const element5 = React.createElement(
+    'h1',
+    {className: 'greeting'},
+    'Hello, world!'
+);
+
 class App extends Component {
   render() {
     return (
@@ -49,6 +61,8 @@ class App extends Component {
         {element}
         {element1}
         {element3}
+        {element4}
+        {element5}
       </div>
     );
   }
