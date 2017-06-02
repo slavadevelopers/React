@@ -17,6 +17,16 @@ function Welcome(props) {
     return <h1>Hello, {props.name}</h1>;
 }
 
+function myComponent() {
+    return (
+        <div>
+            <Welcome name="Sara" />
+            <Welcome name="Cahal" />
+            <Welcome name="Edite" />
+        </div>
+    );
+}
+
 const user = {
     firstName: 'Vyacheslav',
     lastName: 'Mukhin',
@@ -70,6 +80,7 @@ class App extends Component {
         {element4}
         {element5}
         {element6}
+        {myComponent()}
       </div>
     );
   }
