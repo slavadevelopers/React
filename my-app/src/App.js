@@ -13,6 +13,10 @@ function getGreeting(user) {
     return <h1>Hello, Stranger.</h1>;
 }
 
+function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
+}
+
 const user = {
     firstName: 'Vyacheslav',
     lastName: 'Mukhin',
@@ -47,6 +51,8 @@ const element5 = React.createElement(
     'Hello, world!'
 );
 
+const element6 = <Welcome name="Sara" />;
+
 class App extends Component {
   render() {
     return (
@@ -63,6 +69,7 @@ class App extends Component {
         {element3}
         {element4}
         {element5}
+        {element6}
       </div>
     );
   }
