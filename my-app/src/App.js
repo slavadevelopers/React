@@ -33,6 +33,40 @@ const user = {
     avatarUrl: '/static/media/logo.5d5d9eef.svg'
 }
 
+const userTest = {
+    author: {
+        name: "Hello Kitty",
+        avatarUrl: "http://placekitten.com/g/64/64"
+    },
+    date: new Date(),
+    text: "I hope you enjoy learning React!"
+}
+
+function Comment(props) {
+    return (
+        <div className="Comment">
+            <div className="UserInfo">
+                <img className="Avatar"
+                     src={props.author.avatarUrl}
+                     alt={props.author.name}
+                />
+                <div className="UserInfo-name">
+                    {props.author.name}
+                </div>
+            </div>
+            <div className="Comment-text">
+                {props.text}
+            </div>
+            <div className="Comment-date">
+                {formatDate(props.date)}
+            </div>
+        </div>
+    );
+}
+
+function formatDate(date) {
+    return date.toLocaleDateString();
+}
 
 const element = (
     getGreeting(user)
@@ -81,6 +115,7 @@ class App extends Component {
         {element5}
         {element6}
         {myComponent()}
+        {Comment(userTest)}
       </div>
     );
   }
