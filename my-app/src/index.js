@@ -22,27 +22,56 @@ function tick() {
 
 setInterval(tick, 1000);
 
+function FormattedDate(props) {
+    return <h2>It is {props.date.toLocaleTimeString()}.</h2>;
+}
 
 class Clock extends React.Component {
     constructor(props) {
         super(props);
         this.state = {date: new Date()};
     }
+    componentDidMount() {
+        this.timerID = setInterval(
+            () => this.tickTack(),
+            1000
+        );
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timerID);
+    }
+
+    tickTack() {
+        this.setState({
+            date: new Date()
+        });
+    }
     render() {
         return (
             <div>
-                <h1>Hello, world! Function to a Class</h1>
-                <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+                <h1>Hello, world! The data flows down</h1>
+                <FormattedDate date={this.state.date} />
             </div>
         );
     }
 }
 
+function App2() {
+    return (
+        <div>
+            <Clock />
+            <Clock />
+            <Clock />
+        </div>
+    );
+}
+
 function tick2() {
     ReactDOM.render(
-        <Clock />,
+        <App2 />,
         document.getElementById('State-page')
     );
 }
 
-setInterval(tick2, 1000);
+tick2();
