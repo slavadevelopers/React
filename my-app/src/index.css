@@ -4,6 +4,7 @@ body {
   font-family: sans-serif;
 }
 
-#Rendering-Elements {
+#Rendering-Elements,
+#State-page {
   text-align: center;
 }
