@@ -5,6 +5,7 @@ body {
 }
 
 #Rendering-Elements,
-#State-page {
+#State-page,
+#HandlingEvents {
   text-align: center;
 }
