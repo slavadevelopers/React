@@ -6,6 +6,7 @@ body {
 
 #Rendering-Elements,
 #State-page,
-#HandlingEvents {
+#HandlingEvents,
+#UserGuest {
   text-align: center;
 }

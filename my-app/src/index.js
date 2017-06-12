@@ -134,3 +134,30 @@ function HandlingEvents() {
 }
 
 HandlingEvents()
+
+
+function UserGreeting(props) {
+    return <h1>Welcome back!</h1>
+}
+
+function GuestGretting(props) {
+    return <h1>Please sing up.</h1>
+}
+
+function ToogetherUserGuest() {
+    return (
+        <div>
+            <UserGreeting />
+            <GuestGretting />
+        </div>
+    )
+}
+
+function RenderUserGuest() {
+    ReactDOM.render(
+        <ToogetherUserGuest />,
+        document.getElementById('UserGuest')
+    )
+}
+
+RenderUserGuest();
