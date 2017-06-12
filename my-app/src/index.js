@@ -161,3 +161,23 @@ function RenderUserGuest() {
 }
 
 RenderUserGuest();
+
+function Greeting(props) {
+    const isLoggedIn = props.isLoggedIn;
+
+    if (isLoggedIn) {
+        return (
+          <h1>Welcom back!</h1>
+        );
+    }
+    return <h1>Please sing up.</h1>
+}
+
+function RenderGreeting() {
+    ReactDOM.render(
+      <Greeting isLoggedIn={true}/>,
+        document.getElementById('UserGuest-2')
+    );
+}
+
+RenderGreeting();
