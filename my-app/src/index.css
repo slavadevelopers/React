@@ -10,6 +10,7 @@ body {
 #UserGuest,
 #UserGuest-2,
 #LoginControl,
-#RenderMailbox {
+#RenderMailbox,
+#RenderClassPage {
   text-align: center;
 }
