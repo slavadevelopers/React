@@ -310,3 +310,17 @@ function RenderClassPage() {
 }
 
 RenderClassPage();
+
+const numbers = [1, 2, 3, 4, 5];
+const listItem = numbers.map((number) =>
+    <li>{number}</li>
+)
+
+function RenderMultipleComponents() {
+    ReactDOM.render(
+        <ul>{listItem}</ul>,
+        document.getElementById('RenderMultipleComponents')
+    );
+}
+
+RenderMultipleComponents();
