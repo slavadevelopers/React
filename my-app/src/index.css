@@ -8,6 +8,7 @@ body {
 #State-page,
 #HandlingEvents,
 #UserGuest,
-#UserGuest-2 {
+#UserGuest-2,
+#LoginControl {
   text-align: center;
 }
