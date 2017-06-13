@@ -312,13 +312,22 @@ function RenderClassPage() {
 RenderClassPage();
 
 const numbers = [1, 2, 3, 4, 5];
-const listItem = numbers.map((number) =>
-    <li>{number}</li>
-)
+
+function NumberList(props) {
+    const numbers = props.numbers;
+    const listItem = numbers.map((number) =>
+        <li key={number}>
+            {number}
+        </li>
+    );
+    return (
+        <ul>{listItem}</ul>
+    );
+}
 
 function RenderMultipleComponents() {
     ReactDOM.render(
-        <ul>{listItem}</ul>,
+        <NumberList numbers={numbers} />,
         document.getElementById('RenderMultipleComponents')
     );
 }
