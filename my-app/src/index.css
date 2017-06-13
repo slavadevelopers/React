@@ -9,6 +9,7 @@ body {
 #HandlingEvents,
 #UserGuest,
 #UserGuest-2,
-#LoginControl {
+#LoginControl,
+#RenderMailbox {
   text-align: center;
 }
