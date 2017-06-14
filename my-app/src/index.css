@@ -11,6 +11,7 @@ body {
 #UserGuest-2,
 #LoginControl,
 #RenderMailbox,
-#RenderClassPage {
+#RenderClassPage,
+#Calculator {
   text-align: center;
 }
