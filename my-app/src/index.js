@@ -847,6 +847,7 @@ class ProductTable extends React.Component {
     }
 }
 
+
 class SearchBar extends React.Component {
     render() {
         return (
