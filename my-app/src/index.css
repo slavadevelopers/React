@@ -15,3 +15,11 @@ body {
 #Calculator {
   text-align: center;
 }
+.FancyBorder {
+  border-width: 12px;
+  border-style: solid;
+}
+
+.FancyBorder-yellow {
+  border-color: yellow;
+}
