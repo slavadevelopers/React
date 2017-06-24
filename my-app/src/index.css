@@ -24,6 +24,10 @@ body {
   border-color: yellow;
 }
 
+.FancyBorder-blue {
+  border-color: blue;
+}
+
 .SplitPane {
   width: 100%;
   height: 100px;
